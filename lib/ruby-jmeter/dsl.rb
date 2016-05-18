@@ -510,7 +510,7 @@ module RubyJmeter
       attach_node(node, &block)
     end
 
-    alias_method :bytes_throughput_over, :bytes_throughput_over_time
+    alias_method :bytes_throughput, :bytes_throughput_over_time
 
     def perfmon_collector(params = {}, &block)
       node = RubyJmeter::Plugins::PerfmonCollector.new(params)

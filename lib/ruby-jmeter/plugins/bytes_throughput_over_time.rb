@@ -4,8 +4,9 @@ module RubyJmeter
       attr_accessor :doc
       include Helper
       def initialize(name, params={})
+        testname = (params[:name] || 'BytesThroughput')
         @doc = Nokogiri::XML(<<-XML.strip_heredoc)
-          <kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui guiclass="kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui" testclass="kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui" testname="#{name}" enabled="true">
+          <ResultCollector guiclass="kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui" testclass="ResultCollector" testname="#{testname}" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -39,7 +40,7 @@ module RubyJmeter
             <stringProp name="filename"></stringProp>
             <longProp name="interval_grouping">1000</longProp>
             <boolProp name="graph_aggregated">false</boolProp>
-          </kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui>
+          </ResultCollector>
         XML
         update params
       end
