@@ -13,7 +13,7 @@ module RubyJmeter
       def initialize(name, params={})
         testname = (params[:name] || 'BytesThroughput')
         @doc = Nokogiri::XML(<<-XML.strip_heredoc)
-          <ResultCollector guiclass="kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui" testclass="ResultCollector" testname="#{testname}" enabled="true">
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Bytes Throughput Over Time" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -53,7 +53,7 @@ module RubyJmeter
             <stringProp name="end_offset"></stringProp>
             <boolProp name="include_checkbox_state">false</boolProp>
             <boolProp name="exclude_checkbox_state">false</boolProp>
-          </ResultCollector>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
         XML
         update params
       end
