@@ -1,4 +1,11 @@
 module RubyJmeter
+  class DSL
+    def bytes_throughput(params = {}, &block)
+      node = RubyJmeter::Plugins::BytesThroughputOverTime.new(params)
+      attach_node(node, &block)
+    end
+  end
+
   module Plugins
     class BytesThroughputOverTime
       attr_accessor :doc
