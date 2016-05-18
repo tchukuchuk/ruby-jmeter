@@ -5,7 +5,7 @@ module RubyJmeter
       include Helper
       def initialize(name, params={})
         @doc = Nokogiri::XML(<<-XML.strip_heredoc)
-          <kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui testclass="ResultCollector" testname="jp@gc - Bytes Throughput Over Time" enabled="true">
+          <kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui guiclass="kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui" testclass="kg.apc.jmeter.vizualizers.BytesThroughputOverTimeGui" testname="#{name}" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -35,7 +35,7 @@ module RubyJmeter
                 <threadCounts>true</threadCounts>
               </value>
             </objProp>
-            <stringProp name="TestPlan.comments">Run the test and see how many bytes were sent and received by JMeter</stringProp>
+            <stringProp name="TestPlan.comments"></stringProp>
             <stringProp name="filename"></stringProp>
             <longProp name="interval_grouping">1000</longProp>
             <boolProp name="graph_aggregated">false</boolProp>
