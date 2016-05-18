@@ -505,6 +505,13 @@ module RubyJmeter
 
     alias_method :active_threads, :active_threads_over_time
 
+    def bytes_throughput_over_time(params = {}, &block)
+      node = RubyJmeter::Plugins::BytesThroughputOverTime.new(params)
+      attach_node(node, &block)
+    end
+
+    alias_method :bytes_throughput_over, :bytes_throughput_over_time
+
     def perfmon_collector(params = {}, &block)
       node = RubyJmeter::Plugins::PerfmonCollector.new(params)
       attach_node(node, &block)
