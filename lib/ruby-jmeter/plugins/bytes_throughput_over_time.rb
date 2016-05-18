@@ -41,12 +41,18 @@ module RubyJmeter
                 <assertionsResultsToSave>0</assertionsResultsToSave>
                 <bytes>true</bytes>
                 <threadCounts>true</threadCounts>
+                <sampleCount>true</sampleCount>
               </value>
             </objProp>
-            <stringProp name="TestPlan.comments"></stringProp>
             <stringProp name="filename"></stringProp>
             <longProp name="interval_grouping">1000</longProp>
             <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels"></stringProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
           </ResultCollector>
         XML
         update params
