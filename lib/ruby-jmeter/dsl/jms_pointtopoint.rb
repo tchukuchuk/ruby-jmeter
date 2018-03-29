@@ -20,6 +20,7 @@ module RubyJmeter
   <boolProp name="JMSSampler.isFireAndForget">true</boolProp>
   <boolProp name="JMSSampler.isNonPersistent">false</boolProp>
   <boolProp name="JMSSampler.useReqMsgIdAsCorrelId">false</boolProp>
+  <boolProp name="JMSSampler.useResMsgIdAsCorrelId">false</boolProp>
   <stringProp name="JMSSampler.timeout"/>
   <stringProp name="HTTPSamper.xml_data"/>
   <stringProp name="JMSSampler.initialContextFactory"/>
@@ -28,13 +29,7 @@ module RubyJmeter
     <collectionProp name="Arguments.arguments"/>
   </elementProp>
   <elementProp name="arguments" elementType="JMSProperties">
-    <collectionProp name="JMSProperties.properties">
-      <elementProp name="" elementType="JMSProperty">
-        <stringProp name="JMSProperty.name"> </stringProp>
-        <stringProp name="JMSProperty.value"/>
-        <stringProp name="JMSProperty.type">java.lang.String</stringProp>
-      </elementProp>
-    </collectionProp>
+    <collectionProp name="JMSProperties.properties"/>
   </elementProp>
 </JMSSampler>)
       EOS

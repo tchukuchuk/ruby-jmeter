@@ -19,6 +19,8 @@ module RubyJmeter
   </elementProp>
   <stringProp name="HTTPSampler.domain"/>
   <stringProp name="HTTPSampler.port"/>
+  <stringProp name="HTTPSampler.proxyHost"/>
+  <stringProp name="HTTPSampler.proxyPort"/>
   <stringProp name="HTTPSampler.connect_timeout"/>
   <stringProp name="HTTPSampler.response_timeout"/>
   <stringProp name="HTTPSampler.protocol"/>
